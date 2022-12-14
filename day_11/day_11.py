@@ -42,7 +42,7 @@ class AoC11:
             monkey['checks'] = monkey.get('checks') + 1
             new = monkey.get('operation')()(item)
             if divide_by_three:
-                new //= 3
+                new = new // 3
             new = new % self.ppcm
             if new % monkey.get('divide_by') == 0:
                 next_monkey = monkey.get('monkey_if_true')
