@@ -53,14 +53,14 @@ class AoC14:
       
     def question1(self):
         result = 0
-        while _ := self._drop_sand():
+        while self._drop_sand():
             result += 1
         return result
 
     def question2(self):
         self.area = self.initial_area.copy()
         result = 0
-        while _ := self._drop_sand(use_infinite_wall=True):
+        while self._drop_sand(use_infinite_wall=True):
             result += 1
         return result + 1 
                 
