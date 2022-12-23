@@ -6,10 +6,10 @@ class AoC20:
         with open('input.txt') as f:
             self.initial_list = [int(line.replace('\n', '')) for line in f.readlines()]
             self.initial_index_0 = self.initial_list.index(0)
-            self.initial_list = [(i, item) for i, item in enumerate (self.initial_list.copy())]
+            self.initial_list = [(i, item) for i, item in enumerate (self.initial_list)]
 
     def _mix(self, initial, nb_mixes=1):
-        queue = deque(initial.copy())
+        queue = deque(initial)
         for _ in range(nb_mixes):
             for index, item in initial:
                 if item == 0:
